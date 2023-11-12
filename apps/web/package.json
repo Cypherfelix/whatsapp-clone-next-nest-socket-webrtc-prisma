@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "emoji-picker-react": "^4.5.15",
+    "firebase": "^10.6.0",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "*"
+    "react-icons": "^4.11.0",
+    "react-image-file-resizer": "^0.4.8",
+    "socket.io-client": "^4.7.2",
+    "ui": "*",
+    "wavesurfer.js": "^7.4.5"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.19",
