@@ -1,51 +1,63 @@
-# Turborepo Tailwind CSS starter
+# WhatsApp Clone with Next-Nest-Socket-PeerJS-Prisma
 
-This is an official starter Turborepo.
+This repository contains a comprehensive WhatsApp clone built with modern technologies like Next.js, NestJS, Socket.IO, PeerJS, and Prisma. It's designed to emulate WhatsApp's key features such as real-time messaging, voice, and video calls using a JavaScript/TypeScript stack.
 
-## Using this example
+## Getting Started
 
-Run the following command:
+To set up the project, clone the repository and install the necessary dependencies:
 
 ```sh
-npx create-turbo@latest -e with-tailwind
+git clone https://github.com/Cypherfelix/whatsapp-clone-next-nest-socket-webrtc-prisma.git
+cd whatsapp-clone-next-nest-socket-webrtc-prisma
+npm install
 ```
 
-## What's inside?
+## Project Structure
 
-This Turborepo includes the following packages/apps:
+The project is organized as a monorepo with several integral applications and libraries:
 
-### Apps and Packages
+### Client Application: Web Frontend ([`apps/web`](apps/web))
 
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- **Next.js Framework**: Uses Next.js for React-based frontend development, server-side rendering, and SEO optimization.
+- **Real-Time Communication**: Integrates Socket.IO for messaging and PeerJS for WebRTC-based peer-to-peer voice and video calls.
+- **Tailwind CSS**: Tailwind CSS is used for a responsive and modern user interface.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Server Application: Nest Backend ([`apps/backend`](apps/backend))
 
-### Building packages/ui
+- **NestJS Backend**: A robust NestJS backend handling API requests, real-time WebSocket connections, and database operations.
+- **Socket.IO**: Manages WebSocket connections for instant messaging and event-driven communication.
+- **Prisma ORM**: Utilizes Prisma for database management, ensuring efficient data storage and retrieval.
 
-This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.js` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
+### Shared UI Library (`common-ui`)
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.js` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
+- **React Components**: A library of reusable React components, styled with Tailwind CSS for consistency across the client application.
 
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
+### Real-Time Communication Library (`realtime-communication`)
 
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/**/*.{js,ts,jsx,tsx}",
-  ],
-```
+- **PeerJS Integration**: Facilitates WebRTC peer-to-peer connections using PeerJS, enabling high-quality voice and video communication in the client app.
 
-### Utilities
+### Database Configuration (`database-config`)
 
-This Turborepo has some additional tools already setup for you:
+- **Prisma Schema**: Houses the Prisma schema, defining database models and relationships, crucial for the application's data management.
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Building and Running
+
+Detailed instructions on building and running each component within the monorepo, including specific steps for the `apps/web` and `apps/backend` directories.
+
+## Configuration
+
+Comprehensive setup guidelines, including configuring environment variables, database connections, PeerJS settings, and more.
+
+## Technologies and Tools
+
+- **Tailwind CSS**: For modern, responsive design.
+- **TypeScript**: Enhances development with type safety.
+- **ESLint and Prettier**: Used for code linting and formatting, ensuring code quality and consistency.
+
+## Contributing
+
+Guidelines for contributing to the project, including standards for coding, pull requests, and code reviews.
+
+## License
+
+
